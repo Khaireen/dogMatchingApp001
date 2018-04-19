@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './forms/login-form/login-form.component';
@@ -9,6 +9,7 @@ import { AddDogFormComponent } from './forms/add-dog-form/add-dog-form.component
 import { MainGalleryViewComponent } from './views/main-gallery-view/main-gallery-view.component';
 import { FavouritesGalleryViewComponent } from './views/favourites-gallery-view/favourites-gallery-view.component';
 import { DogInfoViewComponent } from './views/dog-info-view/dog-info-view.component';
+import { SignupFormComponent } from './forms/signup-form/signup-form.component';
 
 
 @NgModule({
@@ -19,10 +20,12 @@ import { DogInfoViewComponent } from './views/dog-info-view/dog-info-view.compon
     AddDogFormComponent,
     MainGalleryViewComponent,
     FavouritesGalleryViewComponent,
-    DogInfoViewComponent
+    DogInfoViewComponent,
+    SignupFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [
