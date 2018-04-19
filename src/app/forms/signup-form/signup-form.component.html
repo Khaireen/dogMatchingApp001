@@ -1,29 +1,31 @@
-<form>
+<form #signupForm="ngForm">
   <div class="form-group">
     <label for="userLogin">Login</label>
-    <input class="userLogin" type="text" class="form-control">
+    <input class="userLogin" type="text" class="form-control" [(ngModel)]="user.login" name="login" placeholder="Please enter name or nickname">
   </div>
 
   <div class="form-group">
-    <label for="email">Password</label>
-    <input type="text" id="email" class="form-control">
+    <label for="email">Email address</label>
+    <input type="text" id="email" class="form-control" [(ngModel)]="user.email" name="email"placeholder="Please enter email address">
   </div>
 
   <div class="form-group">
     <label for="userPassword">Password</label>
-    <input type="text" id="userPassword" class="form-control">
+    <input type="text" id="userPassword" class="form-control" [(ngModel)]="user.password.pass" name="pass" placeholder="Please enter password">
   </div>
 
   <div class="form-group">
-    <label for="confirmPassword">Password</label>
-    <input type="text" id="confirmPassword" class="form-control">
+    <label for="confirmPassword">Confirm password</label>
+    <input type="text" id="confirmPassword" class="form-control" [(ngModel)]="user.password.confirmPass" name="confirmPass"  placeholder="Please confirm password">
   </div>
 
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="termsAgreedCheckbox">
-    <label class="form-check-label" for="termsAgreedCheckbox">Confirm that you've read the Terms and 
-      Conditions</label>
+    <label class="form-check-label" for="termsAgreedCheckbox">Confirm that you've read the Terms and Conditions
+    </label>
   </div>
   <button type="reset" class="btn btn-primary">Cancel</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-success" [disabled]="!signupForm.form.valid" (click)="addUserToTable(user)" >Submit</button>
 </form>
+
+<div>{{ user | json }}</div>

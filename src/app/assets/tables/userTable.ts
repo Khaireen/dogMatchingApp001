@@ -6,7 +6,7 @@ export var UserInformations = [
         address: {
             streetName: 'Warszawska',
             houseNumber: '5F',
-            flatNumber:  12,
+            flatNumber: 12,
             city: 'Pcim',
             zipCode: '12-321'
         }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../classes/User';
+import { UserInformations } from '../../assets/tables/userTable';
+import { userSignupInfo } from '../../assets/tables/userLoginTable';
 
 @Component({
   selector: 'app-signup-form',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupFormComponent implements OnInit {
 
-  constructor() { }
+  public user:User;
 
   ngOnInit() {
+
+    this.user = new User({
+      login: "",
+      email: "", 
+      password: { pwd: "", confirm_pwd: "" },
+      terms: false
+    });
+  }
+
+  addUserToTable(userData) {
+    userSignupInfo.push(userData)
   }
 
 }
