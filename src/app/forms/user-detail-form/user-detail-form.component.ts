@@ -6,14 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail-form.component.css']
 })
 export class UserDetailFormComponent implements OnInit {
-  user = {}
+  
   constructor() { }
 
   ngOnInit() {
   }
 
-  addUserDetails() {
-    
-  }
+  
 
 }
