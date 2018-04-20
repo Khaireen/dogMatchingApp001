@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Dog } from '../../classes/Dog';
+import { dogBreed } from 'c:/Kasia/dogMatchingApp001/src/app/assets/tables/dogBreeds'
+
 
 @Component({
   selector: 'app-add-dog-form',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDogFormComponent implements OnInit {
 
-  constructor() { }
+  public dog: Dog;
 
   ngOnInit() {
+
+    this.dog = new Dog({
+      dogName: "",
+      kennelName: "",
+      breed: "",
+      color: "",
+      sex: "",
+      birthDate: "",
+      healthInfo: "",
+      showTitles: "",
+      training: "",
+      additionalInfo: "",
+      dogWebsite: "",
+      dogImage: File,
+    })
+
+  }
+
+  handleBreedChange(value) {
+    
   }
 
 }
+
+

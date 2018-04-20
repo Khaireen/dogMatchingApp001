@@ -1,64 +1,85 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      
+    </div>
+  </div>
+</div>
 <form>
   <div class="form-group">
     <label for="dogName">Name</label>
-    <input id="dogName" type="text" class="form-control">
+    <input id="dogName" type="text" class="form-control" required [(ngModel)]="dog.dogName" name="dogName">
   </div>
 
   <div class="form-group">
     <label for="kennelName">Kennel name</label>
-    <input type="text" id="kennelName" class="form-control">
+    <input type="text" id="kennelName" class="form-control" required [(ngModel)]="dog.kennelName" name="kennelName">
   </div>
 
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="breed">Breed</label>
-    <input type="text" id="breed" class="form-control">
+    <input *ngFor="let breed of dogBreed" type="text" id="breed" class="form-control" required [(ngModel)]="dog.breed" name="breed">
+  </div> -->
+  <div>
+    <label for="dogBreed">Breed</label>
+    <select id="dogBreed" class="form-control" [(ngModel)]="dog.breed" name="breed">
+      <option value="1">leonberger</option>
+      <option value="2">hovawart</option>
+      <option value="3">german shepherd</option>
+      <option value="4">chichuachua</option>
+    </select>
   </div>
-
   <div class="form-group">
     <label for="sex">Sex</label>
-    <input type="text" id="sex" class="form-control">
+    <select id="sex" class="form-control" required [(ngModel)]="dog.sex" name="sex">
+      <option value="1">male</option>
+      <option value="2">female</option>  
+    </select>
   </div>
 
   <div class="form-group">
     <label for="color">Color</label>
-    <input type="text" id="color" class="form-control">
+    <input type="text" id="color" class="form-control" required [(ngModel)]="dog.color" name="color">
   </div>
 
   <div class="form-group">
     <label for="birthDate">Birthdate</label>
-    <input type="text" id="birthDate" class="form-control">
+    <input type="text" id="birthDate" class="form-control" required [(ngModel)]="dog.birthDate" name="birthDate" placeholder="YYYY-MM-DD">
   </div>
 
   <div class="form-group">
     <label for="healthInfo">Health info</label>
-    <textarea type="text" id="healthInfo" cols="30" rows="5" class="form-control"></textarea>
+    <textarea type="text" id="healthInfo" cols="30" rows="5" class="form-control" [(ngModel)]="dog.healthInfo" name="healthInfo"></textarea>
   </div>
 
   <div class="form-group">
     <label for="showTitles">Dogshow titles</label>
-    <textarea type="text" id="showTitles" cols="30" rows="5" class="form-control"></textarea>
+    <textarea type="text" id="showTitles" cols="30" rows="5" class="form-control" [(ngModel)]="dog.showTitles" name="showTitles"></textarea>
   </div>
 
   <div class="form-group">
     <label for="training">Training</label>
-    <textarea type="text" id="training" cols="30" rows="5" class="form-control"></textarea>
+    <textarea type="text" id="training" cols="30" rows="5" class="form-control" [(ngModel)]="dog.training" name="training"></textarea>
   </div>
 
   <div class="form-group">
-    <label for="additionalInfo">Training</label>
-    <textarea type="text" id="additionalInfo" cols="30" rows="5" class="form-control"></textarea>
+    <label for="additionalInfo">Additional info</label>
+    <textarea type="text" id="additionalInfo" cols="30" rows="5" class="form-control" [(ngModel)]="dog.additionalInfo" name="additionalInfo"></textarea>
   </div>
 
   <div class="form-group">
-    <label for="dogWebsite">Training</label>
-    <input type="url" id="dogWebsite" class="form-control">
+    <label for="dogWebsite">Dog website</label>
+    <input type="url" id="dogWebsite" class="form-control" [(ngModel)]="dog.dogWebsite" name="dogWebsite">
   </div>
 
   <div class="form-group">
     <label for="dogPhoto">Add photo</label>
-    <input type="file" id="dogPhoto" class="form-control">
-  </div>  
+    <input type="file" id="dogPhoto" class="form-control" required [(ngModel)]="dog.dogImage" name="dogImage">
+  </div>
 
-  <button class="btn btn-primary">Submit</button>
+  <button class="btn btn-warning">Cancel</button>
+  <button class="btn btn-success">Submit</button>
 
 </form>
+
+<div>{{ dog | json }}</div>
