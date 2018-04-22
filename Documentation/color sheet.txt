@@ -1,0 +1,5 @@
+DMA kolorystyka
+
+jasny (tekst, outline'y): #f0f8ff  RGB	240	248	255 Alice Blue
+background: rgba(51,102,255, 0.9)
+box-shadow: rgba(51,102,255, 0.3)
