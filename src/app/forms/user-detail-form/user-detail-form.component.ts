@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailedUser } from '../../classes/DetailedUser';
 
 @Component({
   selector: 'app-user-detail-form',
@@ -6,12 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-detail-form.component.css']
 })
 export class UserDetailFormComponent implements OnInit {
-  
-  constructor() { }
+
+  public userDetails: DetailedUser;
 
   ngOnInit() {
+
+    this.userDetails = new DetailedUser({
+      name: "",
+      surname: "",
+      phoneNumber: "",
+      streetName: "",
+      houseNumber: "",
+      flatNumber: "",
+      city: "",
+      zipCode: "",
+      country: "",
+    })
+
   }
 
-  
+
 
 }

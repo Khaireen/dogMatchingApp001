@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dog } from '../../classes/Dog';
-import { dogBreed } from 'c:/Kasia/dogMatchingApp001/src/app/assets/tables/dogBreeds'
+import { dogBreed} from '../../assets/tables/dogBreeds'
 
 
 @Component({

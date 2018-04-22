@@ -10,6 +10,8 @@ import { MainGalleryViewComponent } from './views/main-gallery-view/main-gallery
 import { FavouritesGalleryViewComponent } from './views/favourites-gallery-view/favourites-gallery-view.component';
 import { DogInfoViewComponent } from './views/dog-info-view/dog-info-view.component';
 import { SignupFormComponent } from './forms/signup-form/signup-form.component';
+import { EntryScreenViewComponent } from './views/entry-screen-view/entry-screen-view.component';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { SignupFormComponent } from './forms/signup-form/signup-form.component';
     MainGalleryViewComponent,
     FavouritesGalleryViewComponent,
     DogInfoViewComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    EntryScreenViewComponent
   ],
   imports: [
     BrowserModule,
