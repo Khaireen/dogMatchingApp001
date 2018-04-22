@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { dogInfo } from '../../assets/tables/dogTable';
+
 
 @Component({
   selector: 'app-dog-info-view',
@@ -8,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class DogInfoViewComponent implements OnInit {
 
   constructor() { }
-
+  dogs = dogInfo;
+  
   ngOnInit() {
   }
 

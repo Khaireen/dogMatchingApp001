@@ -7,13 +7,17 @@ body {
     font-family: "Titillium Web", sans-serif;
 }
 
+img {
+    max-width: 500px;
+}
+
 .entryScreen {
     text-align: center;
     color: aliceblue;
-    background: rgba(51, 102, 153, 0.9);
+    background: rgba(51,102,255, 0.9);
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px 4px rgba(51, 102, 153, 0.3);
+    box-shadow: 0 4px 10px 4px rgba(51,102,255, 0.3);
   }

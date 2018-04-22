@@ -9,7 +9,7 @@ import { userSignupInfo } from '../../assets/tables/userLoginTable';
   styleUrls: ['./signup-form.component.css']
 })
 export class SignupFormComponent implements OnInit {
-
+  title: 'Sign Up Form'
   public user:User;
 
   ngOnInit() {
