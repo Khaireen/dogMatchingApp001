@@ -1,4 +1,4 @@
-<div class="entryScreen">
+<div class="entryScreen" [hidden]="isHidden">
 
   <div>
     <h1>Welcome in DMA</h1>
@@ -9,10 +9,15 @@
       <img src="assets/DMAlogoInverted.png"/>
   </div>
   <div>
-    <button class="btn btn-primary" (click)="handleNavigate('login')" >Login</button>
+    <button class="btn btn-primary" (click)="isHidden=true" >
+    <a routerLink="login-form">Login</a>  
+    </button>
   </div>
   <div>
-    <button class="btn btn-primary" (click)="handleNavigate('register')" >Register</button>
+    <button class="btn btn-primary" (click)="isHidden=true" >
+      <a routerLink="signup-form">Register</a></button>
   </div>
-
+</div>
+<div>
+<router-outlet [hidden]="!isHidden"></router-outlet>  
 </div>

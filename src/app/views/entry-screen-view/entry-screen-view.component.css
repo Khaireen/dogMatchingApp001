@@ -21,3 +21,8 @@ img {
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(51,102,255, 0.3);
   }
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}    

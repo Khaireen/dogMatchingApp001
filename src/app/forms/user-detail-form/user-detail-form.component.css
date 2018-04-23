@@ -9,7 +9,7 @@ body {
 
 form {
     color: aliceblue;
-    background-image: url("assets/DMAlogoInverted.png");
+    /* background-image: url("assets/DMAlogoInverted.png"); */
     background: rgba(51,102,255, 0.9);
     padding: 40px;
     max-width: 600px;

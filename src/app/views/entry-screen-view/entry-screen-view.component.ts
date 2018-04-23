@@ -18,4 +18,9 @@ export class EntryScreenViewComponent implements OnInit {
    this.navigate.emit(target);
   }
 
+  hideEntryScreen() {
+    
+  }
+
+
 }
