@@ -12,6 +12,7 @@ export class EntryScreenViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var isHidden = false;
   }
 
   handleNavigate(target: string): void {

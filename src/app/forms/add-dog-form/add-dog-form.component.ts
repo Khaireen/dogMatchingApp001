@@ -11,6 +11,7 @@ import { dogBreed} from '../../assets/tables/dogBreeds'
 export class AddDogFormComponent implements OnInit {
 
   public dog: Dog;
+  public breed = dogBreed;
 
   ngOnInit() {
 

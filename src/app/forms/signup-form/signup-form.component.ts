@@ -18,7 +18,7 @@ export class SignupFormComponent implements OnInit {
       login: "",
       email: "", 
       password: { pwd: "", confirm_pwd: "" },
-      terms: false
+      termsAgreedCheckbox: false
     });
   }
 
