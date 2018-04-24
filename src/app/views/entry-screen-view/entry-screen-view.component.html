@@ -2,22 +2,23 @@
 
   <div>
     <h1>Welcome in DMA</h1>
-    
+
     <p>Please login or register</p>
   </div>
   <div>
-      <img src="assets/DMAlogoInvertedSm.png"/>
+    <img src="assets/DMAlogoInvertedSm.png" />
   </div>
   <div>
-    <button class="btn btn-primary" (click)="isHidden=true" >
-    <a routerLink="login-form">Login</a>  
+    <button class="btn btn-primary" (click)="isHidden=true">
+      <a routerLink="login-form">Login</a>
     </button>
   </div>
   <div>
-    <button class="btn btn-primary" (click)="isHidden=true" >
-      <a routerLink="signup-form">Register</a></button>
+    <button class="btn btn-primary" (click)="isHidden=true">
+      <a routerLink="signup-form">Register</a>
+    </button>
   </div>
 </div>
 <div>
-<router-outlet [hidden]="!isHidden"></router-outlet>  
+  <router-outlet [hidden]="!isHidden"></router-outlet>
 </div>
